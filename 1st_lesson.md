@@ -33,6 +33,19 @@
 8. Уничтожьте созданные ресурсы с помощью **terraform**. Убедитесь, что все ресурсы удалены. Приложите содержимое файла **terraform.tfstate**. 
 9. Объясните, почему при этом не был удалён docker-образ **nginx:latest**. Ответ подкрепите выдержкой из документации [**провайдера docker**](https://docs.comcloud.xyz/providers/kreuzwerker/docker/latest/docs).  
 
+```
+1. Выполнил git clone ветки в локальный git
+2. personal.auto.tfvars
+3. 
+4.
+5.
+6.
+7.
+8.
+9.
+
+```
+
 
 ------
 
