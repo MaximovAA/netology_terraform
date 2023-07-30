@@ -36,8 +36,36 @@
 ```
 1. Выполнил git clone ветки в локальный git
 2. personal.auto.tfvars
-3. 
+3. "result": "5TaQuCMd9KRhVnv0"
 4.
+Ошибка:
+ Error: Missing name for resource
+│
+│   on main.tf line 23, in resource "docker_image":
+│   23: resource "docker_image" {
+│
+│ All resource blocks must have 2 labels (type, name).
+╵
+Исправление:
+resource "docker_image" "nginx" {
+  name         = "nginx:latest"
+  keep_locally = true
+}
+
+Ошибка:
+╷
+│ Error: Invalid resource name
+│
+│   on main.tf line 28, in resource "docker_container" "1nginx":
+│   28: resource "docker_container" "1nginx" {
+│
+│ A name must start with a letter or underscore and may contain only letters, digits, underscores, and dashes.
+
+Исправление:
+resource "docker_container" "nginx" {
+  image = docker_image.nginx.image_id
+  name  = "example_${random_password.random_string.result}"
+
 5.
 6.
 7.
