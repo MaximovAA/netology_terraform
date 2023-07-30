@@ -97,7 +97,8 @@ nginx        latest    89da1fb6dcb9   2 days ago   187MB
 
 8.
 Мы указали в main.tf keep_locally = true, согласно этой опции образ сохраняется после команды terraform destroy
-keep_locally (Boolean) If true, then the Docker image won't be deleted on destroy operation. If this is false, it will delete the image from the docker local storage on destroy operation.
+keep_locally (Boolean) If true, then the Docker image won't be deleted on destroy operation. If this is false,
+it will delete the image from the docker local storage on destroy operation.
 
 ```
 
