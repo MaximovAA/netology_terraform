@@ -34,9 +34,15 @@
 8. Объясните, почему при этом не был удалён docker-образ **nginx:latest**. Ответ подкрепите выдержкой из документации [**провайдера docker**](https://docs.comcloud.xyz/providers/kreuzwerker/docker/latest/docs).  
 
 ```
-1. Выполнил git clone ветки в локальный git
-2. personal.auto.tfvars
-3. "result": "5TaQuCMd9KRhVnv0"
+1.
+Выполнил git clone ветки в локальный git
+
+2.
+personal.auto.tfvars
+
+3.
+"result": "5TaQuCMd9KRhVnv0"
+
 4.
 Ошибка:
  Error: Missing name for resource
@@ -77,6 +83,7 @@ CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS  
 docker ps
 CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS                  NAMES
 f25a709268c2   89da1fb6dcb9   "/docker-entrypoint.…"   6 seconds ago   Up 4 seconds   0.0.0.0:8000->80/tcp   hello_world
+
 7. terraform destroy
 root@Terraform:~/terraform/src# docker ps -a
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
