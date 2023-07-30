@@ -67,6 +67,10 @@ resource "docker_container" "nginx" {
   name  = "example_${random_password.random_string.result}"
 
 5.
+docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                  NAMES
+35893b0902d4   89da1fb6dcb9   "/docker-entrypoint.…"   33 seconds ago   Up 28 seconds   0.0.0.0:8000->80/tcp   example_5TaQuCMd9KRhVnv0
+
 6.
 7.
 8.
