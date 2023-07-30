@@ -30,8 +30,8 @@
 5. Выполните код. В качестве ответа приложите вывод команды ```docker ps```.
 6. Замените имя docker-контейнера в блоке кода на ```hello_world```. Не перепутайте имя контейнера и имя образа. Мы всё ещё продолжаем использовать name = "nginx:latest". Выполните команду ```terraform apply -auto-approve```.
 Объясните своими словами, в чём может быть опасность применения ключа  ```-auto-approve```. В качестве ответа дополнительно приложите вывод команды ```docker ps```.
-8. Уничтожьте созданные ресурсы с помощью **terraform**. Убедитесь, что все ресурсы удалены. Приложите содержимое файла **terraform.tfstate**. 
-9. Объясните, почему при этом не был удалён docker-образ **nginx:latest**. Ответ подкрепите выдержкой из документации [**провайдера docker**](https://docs.comcloud.xyz/providers/kreuzwerker/docker/latest/docs).  
+7. Уничтожьте созданные ресурсы с помощью **terraform**. Убедитесь, что все ресурсы удалены. Приложите содержимое файла **terraform.tfstate**. 
+8. Объясните, почему при этом не был удалён docker-образ **nginx:latest**. Ответ подкрепите выдержкой из документации [**провайдера docker**](https://docs.comcloud.xyz/providers/kreuzwerker/docker/latest/docs).  
 
 ```
 1. Выполнил git clone ветки в локальный git
@@ -72,9 +72,32 @@ CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS  
 35893b0902d4   89da1fb6dcb9   "/docker-entrypoint.…"   33 seconds ago   Up 28 seconds   0.0.0.0:8000->80/tcp   example_5TaQuCMd9KRhVnv0
 
 6.
-7.
+Опасность использования terraform apply -auto-approve может заключатся например в больших проектах, где несколько людей могли внести изменения,
+таким образом мы увидим изменения только по факту их применения. 
+docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS                  NAMES
+f25a709268c2   89da1fb6dcb9   "/docker-entrypoint.…"   6 seconds ago   Up 4 seconds   0.0.0.0:8000->80/tcp   hello_world
+7. terraform destroy
+root@Terraform:~/terraform/src# docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+root@Terraform:~/terraform/src# docker images
+REPOSITORY   TAG       IMAGE ID       CREATED      SIZE
+nginx        latest    89da1fb6dcb9   2 days ago   187MB
+
+{
+  "version": 4,
+  "terraform_version": "1.4.6",
+  "serial": 11,
+  "lineage": "5dfb0f48-d926-443d-f327-cb5db773f395",
+  "outputs": {},
+  "resources": [],
+  "check_results": null
+}
+
 8.
-9.
+Мы указали в main.tf keep_locally = true, согласно этой опции образ сохраняется после команды terraform destroy
+keep_locally (Boolean) If true, then the Docker image won't be deleted on destroy operation. If this is false, it will delete the image from the docker local storage on destroy operation.
 
 ```
 
