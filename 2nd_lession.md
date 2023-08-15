@@ -48,6 +48,7 @@ https://cloud.yandex.ru/docs/compute/concepts/performance-levels
 2. Объявите нужные переменные в файле variables.tf, обязательно указывайте тип переменной. Заполните их **default** прежними значениями из main.tf. 
 3. Проверьте terraform plan. Изменений быть не должно. 
 
+![Plan](https://github.com/MaximovAA/school/blob/main/terrplan.jpg "Пример вывода команд")
 
 ```
 
