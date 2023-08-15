@@ -21,6 +21,25 @@ https://console.cloud.yandex.ru/folders/<ваш cloud_id>/vpc/security-groups.
 - скриншот успешного подключения к консоли ВМ через ssh. К OS ubuntu необходимо подключаться под пользователем ubuntu: "ssh ubuntu@vm_ip_address";
 - ответы на вопросы.
 
+![LK](https://github.com/MaximovAA/school/blob/main/VM.jpg "Пример вывода команд")
+![ssh](https://github.com/MaximovAA/school/blob/main/ssh.jpg "Пример вывода команд")
+```
+preemptible
+Согласно документации Yandex Cloud:
+https://cloud.yandex.ru/docs/compute/concepts/preemptible-vm
+Прерываемые виртуальные машины — это виртуальные машины, которые могут быть принудительно остановлены в любой момент. Это может произойти в двух случаях:
+
+    Если с момента запуска виртуальной машины прошло 24 часа.
+    Если возникнет нехватка ресурсов для запуска обычной виртуальной машины в той же зоне доступности. Вероятность такого события низкая, но может меняться изо дня в день.
+
+Прерываемые виртуальные машины доступны по более низкой цене в сравнении с обычными, однако не обеспечивают отказоустойчивости.
+
+core_fraction
+https://cloud.yandex.ru/docs/compute/concepts/performance-levels
+Уровень производительности vCPU. Этот уровень определяет долю вычислительного времени физических ядер, которую гарантирует vCPU.
+```
+Ошибки были в версии и написании standard
+![ssh](https://github.com/MaximovAA/school/blob/main/standard-v2.jpg "Пример вывода команд")
 
 ### Задание 2
 
@@ -28,6 +47,11 @@ https://console.cloud.yandex.ru/folders/<ваш cloud_id>/vpc/security-groups.
 2. Замените все хардкод-**значения** для ресурсов **yandex_compute_image** и **yandex_compute_instance** на **отдельные** переменные. К названиям переменных ВМ добавьте в начало префикс **vm_web_** .  Пример: **vm_web_name**.
 2. Объявите нужные переменные в файле variables.tf, обязательно указывайте тип переменной. Заполните их **default** прежними значениями из main.tf. 
 3. Проверьте terraform plan. Изменений быть не должно. 
+
+
+```
+
+```
 
 
 ### Задание 3
@@ -45,6 +69,10 @@ https://console.cloud.yandex.ru/folders/<ваш cloud_id>/vpc/security-groups.
 В качестве решения приложите вывод значений ip-адресов команды ```terraform output```.
 
 
+```
+
+```
+
 ### Задание 5
 
 1. В файле locals.tf опишите в **одном** local-блоке имя каждой ВМ, используйте интерполяцию ${..} с несколькими переменными по примеру из лекции.
@@ -52,12 +80,21 @@ https://console.cloud.yandex.ru/folders/<ваш cloud_id>/vpc/security-groups.
 3. Примените изменения.
 
 
+```
+
+```
+
 ### Задание 6
 
 1. Вместо использования трёх переменных  ".._cores",".._memory",".._core_fraction" в блоке  resources {...}, объедините их в переменные типа **map** с именами "vm_web_resources" и "vm_db_resources". В качестве продвинутой практики попробуйте создать одну map-переменную **vms_resources** и уже внутри неё конфиги обеих ВМ — вложенный map.
 2. Также поступите с блоком **metadata {serial-port-enable, ssh-keys}**, эта переменная должна быть общая для всех ваших ВМ.
 3. Найдите и удалите все более не используемые переменные проекта.
 4. Проверьте terraform plan. Изменений быть не должно.
+
+
+```
+
+```
 
 ------
 
@@ -76,3 +113,8 @@ https://console.cloud.yandex.ru/folders/<ваш cloud_id>/vpc/security-groups.
 4. Напишите interpolation-выражение, результатом которого будет: "John is admin for production server based on OS ubuntu-20-04 with X vcpu, Y ram and Z virtual disks", используйте данные из переменных test_list, test_map, servers и функцию length() для подстановки значений.
 
 В качестве решения предоставьте необходимые команды и их вывод.
+
+
+```
+
+```
