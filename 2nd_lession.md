@@ -90,7 +90,7 @@ vm_web_external_ip_address = "158.160.120.228"
 2. Замените переменные с именами ВМ из файла variables.tf на созданные вами local-переменные.
 3. Примените изменения.
 
-
+![local](https://github.com/MaximovAA/school/blob/main/local_var.jpg "Пример вывода команд")
 ```
 
 ```
