@@ -65,7 +65,7 @@ https://cloud.yandex.ru/docs/compute/concepts/performance-levels
 ![apply](https://github.com/MaximovAA/school/blob/main/apply2.jpg "Пример вывода команд")
 ![yavm](https://github.com/MaximovAA/school/blob/main/vmcreate2.jpg "Пример вывода команд")
 ```
-После 2го задания делал destroy поэтому в 3 создаю с 0
+После 2го задания делал destroy поэтому в 3 создаю опять.
 ```
 
 ### Задание 4
@@ -102,6 +102,7 @@ vm_web_external_ip_address = "158.160.120.228"
 3. Найдите и удалите все более не используемые переменные проекта.
 4. Проверьте terraform plan. Изменений быть не должно.
 
+![local](https://github.com/MaximovAA/school/blob/main/nochanges.jpg "Пример вывода команд")
 
 ```
 
