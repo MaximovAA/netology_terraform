@@ -76,7 +76,11 @@ https://cloud.yandex.ru/docs/compute/concepts/performance-levels
 В качестве решения приложите вывод значений ip-адресов команды ```terraform output```.
 
 
+![yavm](https://github.com/MaximovAA/school/blob/main/output.jpg "Пример вывода команд")
 ```
+root@Terraform:~/terraform# terraform output
+vm_db_external_ip_address = "130.193.37.191"
+vm_web_external_ip_address = "158.160.120.228"
 
 ```
 
