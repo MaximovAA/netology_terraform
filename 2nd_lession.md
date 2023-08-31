@@ -62,6 +62,12 @@ https://cloud.yandex.ru/docs/compute/concepts/performance-levels
 3. Примените изменения.
 
 
+![apply](https://github.com/MaximovAA/school/blob/main/apply2.jpg "Пример вывода команд")
+![yavm](https://github.com/MaximovAA/school/blob/main/vmcreate2.jpg "Пример вывода команд")
+```
+После 2го задания делал destroy поэтому в 3 создаю с 0
+```
+
 ### Задание 4
 
 1. Объявите в файле outputs.tf output типа map, содержащий { instance_name = external_ip } для каждой из ВМ.
