@@ -25,7 +25,7 @@ https://console.cloud.yandex.ru/folders/<ваш cloud_id>/vpc/security-groups.
 
 ![LK](https://github.com/MaximovAA/school/blob/main/VM.jpg "Пример вывода команд")
 ![ssh](https://github.com/MaximovAA/school/blob/main/ssh.jpg "Пример вывода команд")
-```
+
 preemptible
 Согласно документации Yandex Cloud:
 https://cloud.yandex.ru/docs/compute/concepts/preemptible-vm
@@ -124,6 +124,6 @@ vm_web_external_ip_address = "158.160.120.228"
 В качестве решения предоставьте необходимые команды и их вывод.
 
 
-```
+
 
 ```
