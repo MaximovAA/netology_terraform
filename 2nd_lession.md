@@ -26,6 +26,7 @@ https://console.cloud.yandex.ru/folders/<ваш cloud_id>/vpc/security-groups.
 ![LK](https://github.com/MaximovAA/school/blob/main/VM.jpg "Пример вывода команд")
 ![ssh](https://github.com/MaximovAA/school/blob/main/ssh.jpg "Пример вывода команд")
 
+```
 preemptible
 Согласно документации Yandex Cloud:
 https://cloud.yandex.ru/docs/compute/concepts/preemptible-vm
@@ -39,7 +40,7 @@ https://cloud.yandex.ru/docs/compute/concepts/preemptible-vm
 core_fraction
 https://cloud.yandex.ru/docs/compute/concepts/performance-levels
 Уровень производительности vCPU. Этот уровень определяет долю вычислительного времени физических ядер, которую гарантирует vCPU.
-
+```
 ```
 Ошибки были в версии и написании standard
 ```
