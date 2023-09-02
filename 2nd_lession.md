@@ -1,3 +1,5 @@
+Файлы конфигурации терраформ можно **[посмотреть здесь](https://github.com/MaximovAA/netology_terraform/tree/master)**.
+
 ### Задание 0
 
 1. Ознакомьтесь с [документацией к security-groups в Yandex Cloud](https://cloud.yandex.ru/docs/vpc/concepts/security-groups?from=int-console-help-center-or-nav).
@@ -5,7 +7,6 @@
 https://console.cloud.yandex.ru/folders/<ваш cloud_id>/vpc/security-groups.   
 Этот функционал понадобится к следующей лекции. 
 
-Файлы конфигурации терраформ можно **[посмотреть здесь](https://github.com/MaximovAA/netology_terraform/tree/master)**.
 
 ### Задание 1
 В качестве ответа всегда полностью прикладывайте ваш terraform-код в git.
