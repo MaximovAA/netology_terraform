@@ -39,8 +39,11 @@ https://cloud.yandex.ru/docs/compute/concepts/preemptible-vm
 core_fraction
 https://cloud.yandex.ru/docs/compute/concepts/performance-levels
 Уровень производительности vCPU. Этот уровень определяет долю вычислительного времени физических ядер, которую гарантирует vCPU.
+
 ```
 Ошибки были в версии и написании standard
+```
+
 ![ssh](https://github.com/MaximovAA/school/blob/main/standard-v2.jpg "Пример вывода команд")
 
 ### Задание 2
@@ -52,9 +55,6 @@ https://cloud.yandex.ru/docs/compute/concepts/performance-levels
 
 ![Plan](https://github.com/MaximovAA/school/blob/main/terrplan.jpg "Пример вывода команд")
 
-```
-
-```
 
 
 ### Задание 3
@@ -93,9 +93,7 @@ vm_web_external_ip_address = "158.160.120.228"
 3. Примените изменения.
 
 ![local](https://github.com/MaximovAA/school/blob/main/local_var.jpg "Пример вывода команд")
-```
 
-```
 
 ### Задание 6
 
@@ -106,9 +104,6 @@ vm_web_external_ip_address = "158.160.120.228"
 
 ![local](https://github.com/MaximovAA/school/blob/main/nochanges.jpg "Пример вывода команд")
 
-```
-
-```
 
 ------
 
