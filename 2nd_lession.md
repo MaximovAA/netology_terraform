@@ -5,7 +5,7 @@
 https://console.cloud.yandex.ru/folders/<ваш cloud_id>/vpc/security-groups.   
 Этот функционал понадобится к следующей лекции. 
 
-**[Файлы конфигурации терраформ можно посмотреть здесь] (https://github.com/MaximovAA/netology_terraform/tree/master)
+**[Файлы конфигурации терраформ можно посмотреть здесь] (https://github.com/MaximovAA/netology_terraform/tree/master)**
 
 ### Задание 1
 В качестве ответа всегда полностью прикладывайте ваш terraform-код в git.
