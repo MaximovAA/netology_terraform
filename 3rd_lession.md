@@ -1,4 +1,4 @@
-# Домашнее задание к занятию «Управляющие конструкции в коде Terraform»
+mc# Домашнее задание к занятию «Управляющие конструкции в коде Terraform»
 
 ### Цели задания
 
@@ -54,6 +54,13 @@
 3. ВМ из пункта 2.2 должны создаваться после создания ВМ из пункта 2.1.
 4. Используйте функцию file в local-переменной для считывания ключа ~/.ssh/id_rsa.pub и его последующего использования в блоке metadata, взятому из ДЗ 2.
 5. Инициализируйте проект, выполните код.
+
+![sec](https://github.com/MaximovAA/school/blob/main/apply-countvm.jpg "Пример вывода команд")  
+
+![sec](https://github.com/MaximovAA/school/blob/main/countVM.jpg "Пример вывода команд")  
+
+![sec](https://github.com/MaximovAA/school/blob/main/countVMsec.jpg "Пример вывода команд")  
+
 
 ```
 
