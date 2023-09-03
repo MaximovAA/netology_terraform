@@ -33,6 +33,11 @@
 
 Приложите скриншот входящих правил «Группы безопасности» в ЛК Yandex Cloud или скриншот отказа в предоставлении доступа к preview-версии.
 
+![sec](https://github.com/MaximovAA/school/blob/main/secgrpapply.jpg "Пример вывода команд")
+![sec](https://github.com/MaximovAA/school/blob/main/secgrp.jpg "Пример вывода команд")
+![sec](https://github.com/MaximovAA/school/blob/main/secrules.jpg "Пример вывода команд")
+
+
 ```
 
 ```
