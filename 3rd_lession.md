@@ -71,7 +71,12 @@
 
 ![sec](https://github.com/MaximovAA/school/blob/main/VMforeach.jpg "Пример вывода команд")  
 
+```
+2.4
+В процессе появились изменения, так как ранее добавлял ключ без root@Terraform, а сейчас прочитали полную строку.
+```
 
+![sec](https://github.com/MaximovAA/school/blob/main/metadata.jpg "Пример вывода команд")  
 
 ------
 
