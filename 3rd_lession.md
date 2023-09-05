@@ -88,6 +88,9 @@
 ```
 
 ```
+![sec](https://github.com/MaximovAA/school/blob/main/diskapply.jpg "Пример вывода команд")  
+
+![sec](https://github.com/MaximovAA/school/blob/main/diskset.jpg "Пример вывода команд")  
 
 ------
 
