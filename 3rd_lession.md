@@ -109,6 +109,9 @@
 ```
 
 ```
+![sec](https://github.com/MaximovAA/school/blob/main/ansibleapply.jpg "Пример вывода команд")  
+
+![sec](https://github.com/MaximovAA/school/blob/main/nginxssh.jpg "Пример вывода команд") 
 
 ------
 
