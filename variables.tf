@@ -28,35 +28,22 @@ variable "default_cidr" {
 variable "vpc_name" {
   type        = string
   default     = "develop"
-  description = "VPC network & subnet name"
+  description = "VPC network&subnet name"
 }
 
-
-###local
-
-
-
-variable "netology-develop-platform" {
+variable "vm_web_family" {
   type        = string
-  default     = "netology-develop-platform"
+  default     = "ubuntu-2004-lts"
+  description = "example"
 }
 
-variable "web" {
+variable "vm_web_platform_id" {
   type        = string
-  default     = "web"
-}
-
-variable "db" {
-  type        = string
-  default     = "db"
+  default     = "standard-v3"
+  description = "example"
 }
 
 variable "vm_web_resources" {
-type = map(string)
-default = {vm_cores = "2",vm_memory = "2",vm_core_fraction = "50"}
-}
-
-variable "vm_db_resources" {
 type = map(string)
 default = {vm_cores = "2",vm_memory = "2",vm_core_fraction = "20"}
 }
@@ -64,4 +51,22 @@ default = {vm_cores = "2",vm_memory = "2",vm_core_fraction = "20"}
 variable "metadata" {
 type = map(string)
 default = {serial-port-enable = "1",ssh-keys = "ubuntu:ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIPcXa1t17x3Ri1gCk9/Qn3InHu+hhQWmixT16Eg+RqI"}
+}
+
+variable "virtual" {
+    type = list(object({
+    vm_name = string
+    cpu  = number
+    ram  = number
+    disk = number
+  }))
+  default = [
+    { vm_name = "main", cpu = 4, ram = 4, disk = 20 },
+    { vm_name = "replica", cpu = 2, ram = 2, disk = 10 },
+  ]
+}
+
+variable "disk_count" {
+    type = list
+  default = [0,1,2]
 }

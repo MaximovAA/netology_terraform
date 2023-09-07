@@ -1,0 +1,15 @@
+[web]
+
+web-1 ansible_host=158.160.100.5
+
+web-2 ansible_host=158.160.121.191
+
+[db]
+
+main ansible_host=84.201.156.111
+
+replica ansible_host=158.160.122.192
+
+[disk]
+
+storage ansible_host=84.252.128.29

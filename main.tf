@@ -8,63 +8,23 @@ resource "yandex_vpc_subnet" "develop" {
   v4_cidr_blocks = var.default_cidr
 }
 
+resource "null_resource" "web_hosts_provision" {
+depends_on = [yandex_compute_instance.ubuntu, yandex_compute_instance.virtual, yandex_compute_instance.storage ]
 
-data "yandex_compute_image" "ubuntu" {
-  family = var.vm_web_family
-}
-
-resource "yandex_compute_instance" "platform" {
-  name        = local.web
-  platform_id = var.vm_web_platform_id
-  resources {
-    cores         = var.vm_web_resources.vm_cores
-    memory        = var.vm_web_resources.vm_memory
-    core_fraction = var.vm_web_resources.vm_core_fraction
+ provisioner "local-exec" {
+    command = "sleep 60"
   }
-  boot_disk {
-    initialize_params {
-      image_id = data.yandex_compute_image.ubuntu.image_id
+
+#Запуск ansible-playbook
+  provisioner "local-exec" {                  
+    command  = "export ANSIBLE_HOST_KEY_CHECKING=False; ansible-playbook -i ${abspath(path.module)}/temp.yml ${abspath(path.module)}/test.yml"
+    on_failure = continue
+    environment = { ANSIBLE_HOST_KEY_CHECKING = "False" }
+  }
+    triggers = {  
+      always_run         = "${timestamp()}"
+      playbook_src_hash  = file("${abspath(path.module)}/test.yml")
+      ssh_public_key     = var.metadata.ssh-keys
     }
-  }
-  scheduling_policy {
-    preemptible = true
-  }
-  network_interface {
-    subnet_id = yandex_vpc_subnet.develop.id
-    nat       = true
-  }
-
-  metadata = {
-    serial-port-enable = var.metadata.serial-port-enable
-    ssh-keys           = var.metadata.ssh-keys
-  }
-
-}
-
-resource "yandex_compute_instance" "platform_db" {
-  name        = local.db
-  platform_id = var.vm_db_platform_id
-  resources {
-    cores         = var.vm_db_resources.vm_cores
-    memory        = var.vm_db_resources.vm_memory
-    core_fraction = var.vm_db_resources.vm_core_fraction
-  }
-  boot_disk {
-    initialize_params {
-      image_id = data.yandex_compute_image.ubuntu.image_id
-    }
-  }
-  scheduling_policy {
-    preemptible = true
-  }
-  network_interface {
-    subnet_id = yandex_vpc_subnet.develop.id
-    nat       = true
-  }
-
-  metadata = {
-    serial-port-enable = var.metadata.serial-port-enable
-    ssh-keys           = var.metadata.ssh-keys
-  }
 
 }
