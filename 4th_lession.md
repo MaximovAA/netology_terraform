@@ -25,7 +25,6 @@
 6. Сгенерируйте документацию к модулю с помощью terraform-docs.    
  
 Пример вызова
-![sec](https://github.com/MaximovAA/school/blob/main/module_console.jpg "Пример вывода команд") 
 
 ```
 module "vpc_dev" {
@@ -35,6 +34,7 @@ module "vpc_dev" {
   cidr = "10.0.1.0/24"
 }
 ```
+![sec](https://github.com/MaximovAA/school/blob/main/module_console.jpg "Пример вывода команд") 
 ```
 Далее пример вывода terraform-docs основной директории
 ```
