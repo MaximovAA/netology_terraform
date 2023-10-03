@@ -11,6 +11,7 @@
 ```
 
 ```
+![sec](https://github.com/MaximovAA/school/blob/main/sshnginx.jpg "Пример вывода команд") 
 
 ------
 
@@ -24,6 +25,7 @@
 6. Сгенерируйте документацию к модулю с помощью terraform-docs.    
  
 Пример вызова
+![sec](https://github.com/MaximovAA/school/blob/main/module_console.jpg "Пример вывода команд") 
 
 ```
 module "vpc_dev" {
@@ -33,6 +35,10 @@ module "vpc_dev" {
   cidr = "10.0.1.0/24"
 }
 ```
+```
+Далее пример вывода terraform-docs основной директории
+```
+
 ## Requirements
 
 | Name | Version |
@@ -81,7 +87,7 @@ module "vpc_dev" {
 
 
 ```
-
+Далее пример вывода terraform-docs модуля network
 ```
 ## Requirements
 
