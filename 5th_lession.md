@@ -8,7 +8,7 @@
 2. Проверьте код с помощью tflint и checkov. Вам не нужно инициализировать этот проект.
 3. Перечислите, какие **типы** ошибок обнаружены в проекте (без дублей).
 
-![sec](https://github.com/MaximovAA/school/blob/main/sshnginx.jpg "Пример вывода команд")
+![sec](https://github.com/MaximovAA/school/blob/main/tlint.jpg "Пример вывода команд")
 
 
 ------
@@ -22,6 +22,11 @@
 5. Пришлите ответ об ошибке доступа к state.
 6. Принудительно разблокируйте state. Пришлите команду и вывод.
 
+![sec](https://github.com/MaximovAA/school/blob/main/backet.jpg "Пример вывода команд")
+![sec](https://github.com/MaximovAA/school/blob/main/srv_role.jpg "Пример вывода команд")
+![sec](https://github.com/MaximovAA/school/blob/main/ydb.jpg "Пример вывода команд")
+![sec](https://github.com/MaximovAA/school/blob/main/state-lock.jpg "Пример вывода команд")
+![sec](https://github.com/MaximovAA/school/blob/main/unlock.jpg "Пример вывода команд")
 
 ------
 ### Задание 3  
