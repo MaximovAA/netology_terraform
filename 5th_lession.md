@@ -52,6 +52,31 @@
 - type=string, description="ip-адрес" — проверка, что значение переменной содержит верный IP-адрес с помощью функций cidrhost() или regex(). Тесты:  "192.168.0.1" и "1920.1680.0.1";
 - type=list(string), description="список ip-адресов" — проверка, что все адреса верны. Тесты:  ["192.168.0.1", "1.1.1.1", "127.0.0.1"] и ["192.168.0.1", "1.1.1.1", "1270.0.0.1"].
 
+![sec](https://github.com/MaximovAA/school/blob/main/Check_ip.jpg "Пример вывода команд")
+![sec](https://github.com/MaximovAA/school/blob/main/check_ip_list.jpg "Пример вывода команд")  
+
+```hcl
+variable "test_ip_address" {
+    type          = string
+    description   = "Example to validate IP address."
+    validation {
+        condition = can(regex("^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$",var.test_ip_address))
+        error_message = "Invalid IP address provided."
+    }
+}
+
+variable "test_ip_address_list" {
+    type          = list(string)
+    description   = "Example to validate IP address."
+    validation {
+        condition =  alltrue([
+        for a in var.test_ip_address_list : can(regex("^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$",a))
+        ])
+        error_message = "Invalid IP address provided."
+    }
+}
+```
+
 ## Дополнительные задания (со звёздочкой*)
 
 **Настоятельно рекомендуем выполнять все задания со звёздочкой.** Их выполнение поможет глубже разобраться в материале.   
